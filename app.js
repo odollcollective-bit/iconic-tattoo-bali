@@ -271,7 +271,7 @@ function initEstimator() {
 
     let durationText = '2.5 – 3.5 Hours';
     let sessionsText = 'Single Session';
-    let healingText = '10–14 Days (Dermalize protocol)';
+    let healingText = '10–14 Days';
 
     if (selectedSize === 'micro') {
       durationText = '1.0 – 1.5 Hours';
