@@ -1,5 +1,5 @@
 /**
- * ICONIC TATTOO BALI — Interactive Core Application
+ * ICONIC TATTOO STUDIO BALI — Interactive Core Application
  * Handles gallery filtering, interactive estimator, lightbox modal, FAQ, and Netlify Forms AJAX
  */
 
@@ -11,7 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initArtistBookingLinks();
   initConsultationForm();
+  initTourEnquiryLinks();
 });
+
+/* Day Tours & Events: preselect the enquiry type */
+function initTourEnquiryLinks() {
+  document.querySelectorAll('[data-enquiry]').forEach(link => {
+    link.addEventListener('click', () => {
+      const select = document.getElementById('form-enquiry-type');
+      if (select) select.value = link.getAttribute('data-enquiry');
+    });
+  });
+}
 
 /* ==========================================================================
    1. Header Scroll Behavior
@@ -59,63 +70,63 @@ function initMobileNav() {
 const galleryData = [
   {
     id: 'g1',
-    category: 'fineline',
-    title: 'Sacred Botanical Peony & Lotus',
-    artist: 'Maya Lindqvist',
-    technique: 'Single Needle 03RL, Delicate Wash',
-    duration: '3.5 Hours',
-    image: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1200&q=80',
-    description: 'Custom botanical composition flowing with natural anatomy, using sterile single-needle precision for razor-sharp longevity.'
+    category: 'balinese',
+    title: 'Balinese Barong Mask',
+    artist: 'Iconic Tattoo Studio',
+    technique: 'Dotwork Shading & Fine Linework',
+    duration: 'Quoted on consultation',
+    image: 'assets/portfolio/barong-mask.jpg',
+    description: 'A sacred Balinese Barong mask on the forearm, the protective spirit of Balinese mythology, framed with frangipani and traditional carving motifs.'
   },
   {
     id: 'g2',
-    category: 'balinese',
-    title: 'Barong Spirit & Balinese Kala Face',
-    artist: 'Dewa "Agung" Pratama',
-    technique: 'Traditional Whip Shading, High Contrast Black',
-    duration: '7 Hours (Full Day)',
-    image: 'https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1200&q=80',
-    description: 'Authentic Balinese mythological iconography representing protection, spiritual balance, and ancient temple carving aesthetics.'
+    category: 'fineline',
+    title: 'Family Names Script',
+    artist: 'Iconic Tattoo Studio',
+    technique: 'Fine Line Script Lettering',
+    duration: 'Quoted on consultation',
+    image: 'assets/portfolio/script-names.jpg',
+    description: 'Flowing hand-lettered names linked with delicate hearts, a meaningful tribute that sits beautifully along the forearm.'
   },
   {
     id: 'g3',
-    category: 'realism',
-    title: 'Hyper-Realistic Nocturnal Wolf & Forest',
-    artist: 'Nicolette Laurent',
-    technique: 'Multi-Tone Greywash, Micro Stippling',
-    duration: '6 Hours',
-    image: 'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1200&q=80',
-    description: 'Seamless photographic depth with velvety black saturated gradients and high-end textural micro-detail.'
+    category: 'fineline',
+    title: 'Fine Line Ornamental Lotus',
+    artist: 'Iconic Tattoo Studio',
+    technique: 'Single Needle Fine Line',
+    duration: 'Quoted on consultation',
+    image: 'assets/portfolio/fineline-lotus.jpg',
+    description: 'A dainty ornamental lotus with flourishes and a guiding star, crisp and minimal on the lower leg.'
   },
   {
     id: 'g4',
-    category: 'irezumi',
-    title: 'Ascending Dragon & Tidal Waves',
-    artist: 'Kai Takahashi',
-    technique: 'Neo-Irezumi, Bold Outlines & Dynamic Wind Bars',
-    duration: '2 Full-Day Sessions',
-    image: 'https://images.unsplash.com/photo-1590246814883-57833640aa91?auto=format&fit=crop&w=1200&q=80',
-    description: 'Dynamic oriental Japanese flow following muscular lines of the outer thigh and hip with timeless visual weight.'
+    category: 'polynesian',
+    title: 'Polynesian Manta Ray',
+    artist: 'Iconic Tattoo Studio',
+    technique: 'Bold Blackwork & Tribal Patterning',
+    duration: 'Quoted on consultation',
+    image: 'assets/portfolio/polynesian-manta.jpg',
+    description: 'A Polynesian-style manta ray on the calf, filled with traditional tribal patterning symbolising grace, strength and freedom.'
   },
   {
     id: 'g5',
-    category: 'geometry',
-    title: 'Metatron Cube Sacred Geometry Sleeve',
-    artist: 'Dewa "Agung" Pratama',
-    technique: 'Precision Dotwork (Stippling) & Clean Linework',
-    duration: '5.5 Hours',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80',
-    description: 'Mathematically exact geometric mandalas rendered with thousand-point dotwork gradients for spiritual resonance.'
+    category: 'blackgrey',
+    title: 'See, Hear, Speak No Evil Dolls',
+    artist: 'Iconic Tattoo Studio',
+    technique: 'Black & Grey Illustrative Shading',
+    duration: 'Quoted on consultation',
+    image: 'assets/portfolio/illustrative-dolls.jpg',
+    description: 'A playful, slightly dark illustrative stack of button-eyed dolls, a modern take on the three wise monkeys.'
   },
   {
     id: 'g6',
     category: 'fineline',
-    title: 'Micro-Realism Hummingbird in Flight',
-    artist: 'Maya Lindqvist',
-    technique: 'Single Needle Micro-Detail',
-    duration: '2.5 Hours',
-    image: 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?auto=format&fit=crop&w=1200&q=80',
-    description: 'Feather-light plumage detail rendered on inner forearm with hospital-grade Dermalize second-skin seal.'
+    title: 'Fine Line In Progress',
+    artist: 'Iconic Tattoo Studio',
+    technique: 'Fine Line Single Needle',
+    duration: 'Quoted on consultation',
+    image: 'assets/portfolio/studio-fineline-process.jpg',
+    description: 'Behind the scenes at our Kuta studio: fresh single-use cartridges, gloved hands and steady fine linework.'
   }
 ];
 
@@ -163,7 +174,7 @@ function initGallery() {
       modalImg.alt = data.title;
       modalTitle.textContent = data.title;
       modalCategory.textContent = data.category.toUpperCase();
-      modalArtist.textContent = `Resident Artist: ${data.artist}`;
+      modalArtist.textContent = data.artist;
       modalTechnique.textContent = data.technique;
       modalDuration.textContent = data.duration;
       modalDesc.textContent = data.description;
@@ -223,7 +234,7 @@ function prefillFormFromArtwork(data) {
   }
 
   if (descTextarea) {
-    descTextarea.value = `Inspired by gallery piece "${data.title}" by ${data.artist}. `;
+    descTextarea.value = `Inspired by your portfolio piece "${data.title}". `;
   }
 
   if (bookingSection) {
@@ -246,11 +257,11 @@ function initEstimator() {
   const estHealingEl = document.getElementById('est-healing');
 
   const artistMap = {
-    'fineline': 'Maya Lindqvist (Fine Line & Micro-Realism)',
-    'balinese': 'Dewa "Agung" Pratama (Sacred Balinese)',
-    'realism': 'Nicolette Laurent (Black & Grey Realism)',
-    'irezumi': 'Kai Takahashi (Japanese Neo-Traditional)',
-    'geometry': 'Dewa "Agung" Pratama (Sacred Geometry & Dotwork)'
+    'fineline': 'Iconic Resident Artist (Fine Line)',
+    'balinese': 'Iconic Resident Artist (Sacred Balinese)',
+    'realism': 'Iconic Resident Artist (Black & Grey)',
+    'irezumi': 'Iconic Resident Artist (Japanese)',
+    'geometry': 'Iconic Resident Artist (Geometry & Dotwork)'
   };
 
   const calculateEstimate = () => {
@@ -314,12 +325,9 @@ function initEstimator() {
       if (formPlacement) formPlacement.value = selectedPlacement;
       if (formStyle) formStyle.value = selectedStyle;
 
-      if (formArtist) {
-        if (selectedStyle === 'fineline') formArtist.value = 'maya';
-        else if (selectedStyle === 'balinese' || selectedStyle === 'geometry') formArtist.value = 'dewa';
-        else if (selectedStyle === 'realism') formArtist.value = 'nicolette';
-        else if (selectedStyle === 'irezumi') formArtist.value = 'kai';
-      }
+      if (formArtist) formArtist.value = 'any';
+      const formEnquiry = document.getElementById('form-enquiry-type');
+      if (formEnquiry) formEnquiry.value = 'tattoo';
 
       if (bookingSection) {
         bookingSection.scrollIntoView({ behavior: 'smooth' });
@@ -410,7 +418,7 @@ function initConsultationForm() {
           <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
           <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
         </svg>
-        Securing Atelier Request...
+        Sending Enquiry...
       `;
     }
 

@@ -1,6 +1,6 @@
 /* ==========================================================================
    ICONIC TATTOO BALI — DESIGN SYSTEM & STYLES
-   Aesthetic: Dark Luxury Editorial Tattoo Atelier (Canggu, Bali)
+   Aesthetic: Dark Luxury Editorial Tattoo Studio (Kuta, Bali)
    ========================================================================== */
 
 :root {
@@ -1613,5 +1613,119 @@ img {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+}
+
+/* ==========================================================================
+   ICONIC UPDATES — logo, team, day tours, review initials
+   ========================================================================== */
+.brand-logo-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-strong);
+}
+
+.team-grid {
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  justify-content: center;
+}
+
+.team-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, #1d1f2a 0%, #0c0d10 75%);
+}
+
+.team-photo-placeholder img {
+  width: 62%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.tours-grid {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+.tours-enquire {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-gold);
+}
+
+.tours-enquire-text {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  flex: 1 1 420px;
+}
+
+.tours-enquire-text .feature-icon {
+  flex-shrink: 0;
+}
+
+.tours-enquire-text h4 {
+  margin-bottom: 0.4rem;
+}
+
+.tours-enquire-text p {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.55;
+}
+
+.tours-enquire-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.author-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  color: var(--gold-light);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .tours-enquire {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* Mobile overflow fixes */
+.form-grid > * {
+  min-width: 0;
+}
+
+.form-input, .form-select, .form-textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-badge-float {
+    right: 0;
   }
 }
