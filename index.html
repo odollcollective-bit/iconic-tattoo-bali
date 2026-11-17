@@ -245,12 +245,11 @@
           <div class="artist-card">
             <div class="artist-photo-wrap team-photo-placeholder">
               <img src="assets/iconic-logo.png" alt="Iconic Tattoo Studio Bali resident artist">
-              <span class="artist-experience-badge">12+ Years Exp</span>
             </div>
             <div class="artist-info">
               <div class="artist-style-tag">Resident Artist</div>
               <h3 class="artist-name">Artist &mdash; Details Coming Soon</h3>
-              <p class="artist-bio">A trained painter and oil artist with more than 12 years of tattooing experience, known for crafted detail and a calm, gentle hand in the chair.</p>
+              <p class="artist-bio">Known for crafted detail and a calm, gentle hand in the chair.</p>
               <div class="artist-action">
                 <a href="#booking" class="artist-book-link" data-artist="resident">
                   Book A Session &rarr;
@@ -589,6 +588,51 @@
       </div>
     </section>
 
+    <section class="section-padding" id="featured-artists" aria-labelledby="featured-artists-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="featured-artists-title">Featured <span>Artists</span></h2>
+        </div>
+        <div class="featured-artists-grid">
+          <article class="artist-card">
+            <div class="featured-artist-photos">
+              <div class="featured-photo-slot featured-photo-portrait">Portrait</div>
+              <div class="featured-photo-slot">Tattoo photo 1</div>
+              <div class="featured-photo-slot">Tattoo photo 2</div>
+            </div>
+            <div class="artist-info">
+              <p class="artist-style-tag">Independent tattoo artist</p>
+              <h3 class="artist-name">Azumi Matters</h3>
+              <p class="artist-bio">Fine-line florals, delicate script and ornamental tattoos.</p>
+              <p class="featured-artist-credit">Tattoo work by Azumi Matters</p>
+              <div class="artist-action featured-artist-actions">
+                <a href="https://www.instagram.com/azumiimatters/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Instagram for Azumi Matters">View Instagram</a>
+                <a href="#booking" class="btn btn-primary artist-book-link" data-artist="Azumi Matters" data-featured-artist aria-label="Enquire about this artist: Azumi Matters">Enquire about this artist</a>
+              </div>
+            </div>
+          </article>
+          <article class="artist-card">
+            <div class="featured-artist-photos">
+              <div class="featured-photo-slot featured-photo-portrait">Portrait</div>
+              <div class="featured-photo-slot">Tattoo photo 1</div>
+              <div class="featured-photo-slot">Tattoo photo 2</div>
+            </div>
+            <div class="artist-info">
+              <p class="artist-style-tag">Independent tattoo artist</p>
+              <h3 class="artist-name">Surya Dwipa</h3>
+              <p class="artist-bio">Detailed black-and-grey tattoos, large-scale sleeves and back pieces.</p>
+              <p class="featured-artist-credit">Tattoo work by Surya Dwipa</p>
+              <div class="artist-action featured-artist-actions">
+                <a href="https://www.instagram.com/suryadwipax/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Instagram for Surya Dwipa">View Instagram</a>
+                <a href="#booking" class="btn btn-primary artist-book-link" data-artist="Surya Dwipa" data-featured-artist aria-label="Enquire about this artist: Surya Dwipa">Enquire about this artist</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="featured-artist-availability">Tell us your preferred artist and dates, and we’ll confirm availability.</p>
+      </div>
+    </section>
+
     <!-- CONSULTATION & BOOKING FORM (NETLIFY FORM) -->
     <section class="section-padding booking-section" id="booking">
       <div class="container">
@@ -644,7 +688,9 @@
                 <label for="form-artist">Preferred Artist</label>
                 <select id="form-artist" name="artist" class="form-select">
                   <option value="any">First Available Artist</option>
-                  <option value="resident">Resident Artist (12+ Years Experience)</option>
+                  <option value="resident">Resident Artist</option>
+                  <option value="Azumi Matters">Azumi Matters</option>
+                  <option value="Surya Dwipa">Surya Dwipa</option>
                 </select>
               </div>
 
