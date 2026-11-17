@@ -386,8 +386,15 @@ function initArtistBookingLinks() {
       if (artistSelect && artistVal) {
         artistSelect.value = artistVal;
       }
+      const isFeaturedArtist = link.hasAttribute('data-featured-artist');
+      if (isFeaturedArtist) {
+        const enquiryType = document.getElementById('form-enquiry-type');
+        if (enquiryType) enquiryType.value = 'tattoo';
+        artistSelect?.focus({ preventScroll: true });
+      }
       if (bookingSection) {
-        bookingSection.scrollIntoView({ behavior: 'smooth' });
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        bookingSection.scrollIntoView({ behavior: isFeaturedArtist && reduceMotion ? 'instant' : 'smooth' });
       }
     });
   });
