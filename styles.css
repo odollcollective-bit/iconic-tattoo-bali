@@ -616,36 +616,15 @@ img {
   box-shadow: var(--shadow-card);
 }
 
-.artist-photo-wrap {
-  position: relative;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-  background: #181920;
+.artist-instagram-link {
+  align-self: flex-start;
+  color: var(--gold-primary);
 }
 
-.artist-photo-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.artist-card:hover .artist-photo-wrap img {
-  transform: scale(1.05);
-}
-
-.artist-experience-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(12, 13, 16, 0.85);
-  border: 1px solid var(--border-subtle);
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
-  font-size: 0.7rem;
+.artist-instagram-link:hover,
+.artist-instagram-link:focus-visible {
   color: var(--gold-light);
-  letter-spacing: 0.05em;
-  backdrop-filter: blur(4px);
+  text-decoration: underline;
 }
 
 .artist-info {
@@ -1628,24 +1607,8 @@ img {
 }
 
 .team-grid {
-  grid-template-columns: repeat(2, minmax(0, 340px));
+  grid-template-columns: repeat(3, minmax(0, 340px));
   justify-content: center;
-}
-
-.team-photo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at 50% 40%, #1d1f2a 0%, #0c0d10 75%);
-}
-
-.team-photo-placeholder img {
-  width: 62%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  opacity: 0.9;
 }
 
 .tours-grid {
